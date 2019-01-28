@@ -13,6 +13,8 @@ boolean fCollision = true;
 boolean fVelocity = true;
 boolean fWandering = true;
 boolean clearScreen = true;
+boolean simulate = true;
+
 int len = 16;
 void setup()
 {
@@ -23,12 +25,14 @@ void setup()
 void draw()
 {
   curTime = millis();
-  
-  if(clearScreen)background(100,0,0);
-  f.update();
-  f.drawFlock();
+  if(simulate)
+  {
+    if(clearScreen)background(100,0,0);
+    f.update();
+    f.drawFlock();
+    footer();
+  }
   prevTime = curTime;
-  footer();
   
 }
 

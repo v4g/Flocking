@@ -22,6 +22,7 @@ void keyPressed()
   if(key == '4' )    fWandering = !fWandering;
   if(key == '+' || key == '=')    len= min(len+1,100);
   if(key == '-')    len = max(len-1,0);
+  if(key == ' ')    simulate = !simulate;
 }
 void mousePressed()
 {
